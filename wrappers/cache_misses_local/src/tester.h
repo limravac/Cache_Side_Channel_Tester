@@ -64,3 +64,4 @@ const char* suffix = "};\n"
 "    close(a_fd);\n"
 "    return 0;\n"
 "}";
+int param_len = 0;
