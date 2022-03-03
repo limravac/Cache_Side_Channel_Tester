@@ -11,7 +11,7 @@ program_name: ./tester
 no_of_params: 1
 
 # The size of the the list of choices for each parameter.
-counts:
+counts: 5
 
 # Number of times the target_name should be executed in each round of execution.
 exec_times: 20
