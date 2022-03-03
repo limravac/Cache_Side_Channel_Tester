@@ -10,6 +10,7 @@ DEFS3 = -D PARAM_LEN=1  -D GDKLIB_UNI
 DEFS4 = -D PARAM_LEN=16 -D OPENSSL_AES
 DEFS5 = -D PARAM_LEN=8  -D OPENSSL_DES
 DEFS6 = -D PARAM_LEN=10 -D OPENSSL_RC4
+DEFS7 = -D PARAM_LEN=1  -D TESTER
 
 TARGET1 = basic_aes
 TARGET2 = gdklib_name
@@ -17,8 +18,9 @@ TARGET3 = gdklib_uni
 TARGET4 = openssl_aes
 TARGET5 = openssl_des
 TARGET6 = openssl_rc4
+TARGET7 = tester
 
-all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(TARGET5) $(TARGET6)
+all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(TARGET5) $(TARGET6) $(TARGET7)
 
 debug: CXXFLAGS += -g -Wall -Wextra
 debug: $(TARGET1)
@@ -41,7 +43,10 @@ $(TARGET5): $(SOURCES) $(HEADERS)
 $(TARGET6): $(SOURCES) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(DEFS6) -o $(TARGET6) $(SOURCES) $(LIBS) $(REDR)
 
+$(TARGET7): $(SOURCES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(DEFS7) -o $(TARGET7) $(SOURCES) $(LIBS) $(REDR)
+
 clean:
-	-@rm -f $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(TARGET5) $(TARGET6)
+	-@rm -f $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(TARGET5) $(TARGET6) $(TARGET7)
 	-@rm mkdir.log make.log
 	-@rm -rf temp/*
