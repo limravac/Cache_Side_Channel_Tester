@@ -17,7 +17,7 @@ const char* prefix = "/*\n"
 "#include <openssl/crypto.h>\n"
 "#include <stddef.h>" 
 "int main(void)\n"
-"{\n"
+"{\n";
 const char* suffix = "\n"
 "    long a_fd, m_fd;\n"
 "    long long accesses, misses;\n"
@@ -65,4 +65,4 @@ const char* suffix = "\n"
 "    close(a_fd);\n"
 "    return 0;\n"
 "}";
-int param_len = 0;
+int param_len = 1;
