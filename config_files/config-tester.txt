@@ -8,7 +8,7 @@ target_dir: ./test_programs/cache_misses
 program_name: ./tester
 
 # The number of parameters the target_name accepts. This should always be placed above 'counts' parameter.
-no_of_params: 0
+no_of_params: 1
 
 # The size of the the list of choices for each parameter.
 counts:
