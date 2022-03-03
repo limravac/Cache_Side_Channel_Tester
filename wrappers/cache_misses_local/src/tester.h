@@ -14,10 +14,10 @@ const char* prefix = "/*\n"
 "#include <linux/hw_breakpoint.h>\n"
 "#include <sys/ioctl.h>\n"
 "#include <asm/unistd.h>\n"
-"#include <openssl/crypto.h>";
-
+"#include <openssl/crypto.h>"
+"int main()\n"
+"{\n";
 const char* suffix = "};\n"
-
 "    long a_fd, m_fd;\n"
 "    long long accesses, misses;\n"
 "\n"
