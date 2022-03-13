@@ -2,7 +2,7 @@
 ## The following parameters are related to the target_name under test.
 
 # The location of the executable.
-target_dir: ./test_programs/cache_misses
+target_dir: ./wrappers/cache_misses_local
 
 # The name of the executable file.
 program_name: ./tester
