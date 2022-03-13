@@ -21,6 +21,8 @@
     #include "openssl_des.h"
 #elif defined OPENSSL_RC4
     #include "openssl_rc4.h"
+#elif defined TESTER
+    #include "tester.h"
 #endif
 
 void sigint_handler(int sigint) {
