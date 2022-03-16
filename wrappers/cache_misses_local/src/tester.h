@@ -18,7 +18,7 @@ const char* prefix = "/*\n"
 "int main(void)\n"
 "{\n";
 const char* suffix = "\n"
-"    long a_fd, m_fd;\n"
+"    ;long a_fd, m_fd;\n"
 "    long long accesses, misses;\n"
 "\n"
 "\n"
